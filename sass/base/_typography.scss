@@ -1,0 +1,81 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  /* font-size: 16px; */
+  line-height: 1.5;
+  color: $color-gray-dark;
+  padding: 1.5rem;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 45px;
+
+  /* text Outdoors */
+  &--main {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    background-image: linear-gradient(
+      to right,
+      $color-tertiary-dark,
+      $color-tertiary-light
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+  /* text baris ke-2 */
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-gray-dark;
+    letter-spacing: 0.5rem;
+
+    animation-name: moveInRight;
+
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+  }
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to left,
+    $color-tertiary-dark,
+    $color-tertiary-light
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.7s;
+
+  &:hover {
+    transform: scale(1.02);
+    text-shadow: 1rem 2rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
